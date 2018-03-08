@@ -8,11 +8,11 @@ export const redisClient = Redis.createClient ({
   password: config.REDIS_PASSWORD
 });
 
-client.on ('error', (error) => {
+redisClient.on ('error', (error) => {
   console.log(error);
 })
 
-client.on('connect', function() {
+redisClient.on('connect', function() {
   console.log('connected');
 });
 
